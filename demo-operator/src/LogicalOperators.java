@@ -56,5 +56,41 @@ public class LogicalOperators {
     System.out.println("result17=" + result17); // 42
     System.out.println("x=" + x); // 7
 
+    // More Examples
+    int o = 7;
+    int g = o++ * 2 + o++;
+    System.out.println(g); // 22
+    // 7 * 2 + 8 = 22
+
+    o = 7;
+    int g2 = o++ + o++ * 2;
+    System.out.println(g2); // 23
+    // from left to right
+    // 7 + 8 * 2 = 23
+
+    o = 7;
+    int g3 = o++ * (o++ + 2);
+    System.out.println(g3); // 70
+    // 7 * (8 + 2) = 
+
+    o = 7;
+    int g4 = o++ * (2 + o++);
+    System.out.println(g4); // 70
+    // 7 * 10
+
+    o = 7;
+    o = o++ + o++ * o++;
+    System.out.println("o=" + o); // 79
+    // 7 + 8 * 9 = 79
+
+    o = 7;
+    o = o++ * o++ + o++;
+    System.out.println("o=" + o); // 65
+    // 7 * 8 + 9
+
+    o = 7;
+    o = o++ * (o++ + o++);
+    System.out.println("o=" + o); // 119
+    // 7 * (8 + 9)
   }
 }
