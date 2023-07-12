@@ -2,7 +2,7 @@ public class String1 {
   public static void main(String[] args) {
     String str = "I am happy, but raining";
     str = str + ".";
-    System.out.println(str); // I am happy, but raining.
+    System.out.println("str=" + str); // I am happy, but raining.
 
     // Method
     // length()
@@ -20,7 +20,7 @@ public class String1 {
     System.out.println(b4); // true
 
     // chatAt(2), find the char at index 2 of the string
-    String str4 = "helloworld"; 
+    String str4 = "helloworld";
     // index 0 of str4 -> 'h'
     // index 4 of str4 -> 'o'
     System.out.println(str4.charAt(2)); // result: l
