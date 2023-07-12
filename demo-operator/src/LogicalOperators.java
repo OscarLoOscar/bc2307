@@ -48,8 +48,13 @@ public class LogicalOperators {
     int x = 5;
     int y = 10;
     int z = x += 3 * y; // Step1: 3 * 10 -> 30, Step2: 5 + 30 -> 35
-    
-    int result17 = (x++ + 2) * x++; // result17=?
+
+    x = 5;
+    int result17 = (x++ + 2) * x++;
+    // (x++ + 2) -> 7, x become 6
+    // 7 * 6 -> 42, x become 7
+    System.out.println("result17=" + result17); // 42
+    System.out.println("x=" + x); // 7
 
   }
 }
