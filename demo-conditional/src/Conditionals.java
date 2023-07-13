@@ -76,24 +76,56 @@ public class Conditionals {
     // Simple Version
     int dayOfWeek = 3;
     String dayName = "";
-    switch (dayOfWeek) { // check if the value equals to the following cases
+    switch (dayOfWeek) { // expression
+      // check if the value equals to any of the following cases
       case 1:
         dayName = "Monday";
+        System.out.println(1);
+        break;
       case 2:
         dayName = "Tuesday";
+        System.out.println(2);
+        break;
       case 3:
         dayName = "Wednesday";
+        System.out.println(3);
+        break;
       case 4:
         dayName = "Thursday";
+        System.out.println(4);
+        break;
       case 5:
         dayName = "Friday";
+        System.out.println(5);
+        break;
       case 6:
         dayName = "Saturday";
+        System.out.println(6);
+        break;
       case 7:
         dayName = "Sunday";
+        System.out.println(7);
+        break;
       // default
     }
-    System.out.println("dayName=" + dayName); // 
+    System.out.println("dayName=" + dayName); //
+
+    char grade2 = 'F';
+    int pocketMoney = 100;
+    switch (grade2) {
+      case 'A':
+        pocketMoney += 100;
+        break;
+      case 'B':
+        pocketMoney += 70;
+        break;
+      case 'C':
+        pocketMoney += 20;
+        break;
+      default:
+        pocketMoney += 5;
+    }
+    System.out.println("pocket money=" + pocketMoney); // 170
 
   }
 }
