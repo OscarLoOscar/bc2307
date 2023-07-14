@@ -57,5 +57,89 @@ public class Loops {
     // i = 3, hello
     // break;
 
+    // continue
+    for (int i = 0; i < 6; i++) {
+      System.out.println("Hello!");
+      if (i > 3) {
+        continue; // go to the next iteration
+      }
+      System.out.println("Bye!");
+    }
+    // i = 0, hello, bye
+    // i = 1, hello, bye
+    // i = 2, hello, bye
+    // i = 3, hello, bye
+    // i = 4, hello
+    // i = 5, hello
+    // i = 6, exit
+
+    for (int i = 0; i < 8; i++) {
+      if (i % 2 == 0 || i % 3 == 0) {
+        System.out.println("i=" + i);
+        if (i % 3 == 0) {
+          System.out.println("hello");
+        }
+      }
+      // if (i % 3 == 0) {
+      // System.out.println("i=" + i);
+      // System.out.println("hello");
+      // }
+    }
+
+    // Nested Loop
+    for (int i = 0; i < 4; i++) {
+      //
+      for (int j = 0; j < 3; j++) {
+        System.out.println("Hello");
+      }
+    } // how many Hello?
+    // i = 0, j = 0, Hello
+    // i = 0, j = 1, Hello
+    // i = 0, j = 2, Hello
+    // i = 0, j = 3, exit inner loop
+    // i = 1, j = 0, Hello
+    // i = 1, j = 1, Hello
+    // i = 1, j = 2, Hello
+    // i = 1, j = 3, exit inner loop
+    // i = 2, j = 0, Hello
+    // i = 2, j = 1, Hello
+    // i = 2, j = 2, Hello
+    // i = 2, j = 3, exit inner loop
+    // i = 3, j = 0, Hello
+    // i = 3, j = 1, Hello
+    // i = 3, j = 2, Hello
+    // i = 3, j = 3, exit inner loop
+    // i = 4, exit outer loop
+
+    // *
+    // **
+    // ***
+    // ****
+    // *****
+    // Approach 1: Nested Loop
+    // System.out.println() & System.out.print()
+    for (int i = 0; i < 5; i++) {
+      for (int j = 0; j < i + 1; j++) {
+        System.out.print("*");
+      }
+      System.out.println("");
+    }
+    // Approach 2: Single Loop & String
+    // System.out.println()
+    String str = "";
+    for (int i = 0; i < 5; i++) {
+      str += "*";
+      System.out.println(str);
+    }
+    // Approach 3: Nested Loop & String
+    // System.out.println()
+    str = "";
+    for (int i = 0; i < 5; i++) {
+      str = "";
+      for (int j = 0; j < i + 1; j++) {
+        str += "*";
+      }
+      System.out.println(str);
+    }
   }
 }
