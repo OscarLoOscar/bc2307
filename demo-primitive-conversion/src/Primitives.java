@@ -39,7 +39,8 @@ public class Primitives {
     if (c2 == 66) {
       System.out.println("c2 is 66");
     }
-    char c3 = 67;
+    char c3 = 67; // downcast
+    System.out.println("c3="+ c3);
     if (c3 == 'C') {
       System.out.println("c3 is C");
     }
@@ -62,9 +63,10 @@ public class Primitives {
     if (character == 98) {
       System.out.println("character=" + character);
     }
-    if (character > 'a') {
+    if (character > 'a') { // ASCII
       System.out.println("character > a");
     }
+    
 
   }
 }

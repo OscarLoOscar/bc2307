@@ -27,15 +27,19 @@ public class Swap {
     // abcdef -> badcfe
     // abc -> bac
     // c -> c
+    // "" -> ""
+    // "ab cd" -> "bac d"
+
     char[] chars = str.toCharArray();
     char temp;
     for (int i = 0; i < chars.length - 1; ++i) {
-      if (i % 2 == 0) {
+      if (i % 2 == 0) { // [0] [1] [2]
+        // Swap
         temp = chars[i];
         chars[i] = chars[i + 1];
         chars[i + 1] = temp;
       }
     }
-    return String.valueOf(chars);
+    return String.valueOf(chars); // static method
   }
 }
