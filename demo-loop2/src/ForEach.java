@@ -49,8 +49,8 @@ public class ForEach {
     // Without using split(), use a for loop to split s2
     // Output: String[]
     // 1. substring()
-    System.out.println(Arrays.toString(split(" hello world a abc !  ")));
-    System.out.println(Arrays.toString(split(" abc  ")));
+    System.out.println(Arrays.toString(split2(" hello world a abc !  ")));
+    System.out.println(Arrays.toString(split2(" abc  ")));
     // 2. toCharArray()
 
   }
@@ -79,4 +79,29 @@ public class ForEach {
     }
     return result;
   }
+
+  public static String[] split2(String s) {
+    // Approach 2: toCharArray()
+    // Count Spaces
+    int spaceCount = 0;
+    String str = s.trim();
+    for (int i = 0; i < str.length(); i++) {
+      if (str.charAt(i) == ' ') {
+        spaceCount++;
+      }
+    }
+    char[] chars = s.toCharArray();
+    int idx = 0;
+    String[] result = new String[spaceCount + 1];
+    for (int i = 0; i < chars.length; ++i) {
+      if (chars[i] == ' ') {
+        idx++;
+      } else {
+        result[idx] += chars[i];
+      }
+    }
+    return result;
+  }
+
+
 }
