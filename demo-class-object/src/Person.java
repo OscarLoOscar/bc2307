@@ -3,7 +3,7 @@ public class Person { // template
   int age;
   char gender; // week 6 -> ENUM
   // ...
-
+  
   public static boolean isMale(char gender) { // belongs to class
     if (gender == 'F') {
       return false;
@@ -65,10 +65,6 @@ public class Person { // template
     computer2.getColor(); // -> Yellow
     computer2.setColor("Black");
     computer2.getColor(); // -> Black
-    String[] strings = new String[3];
-    String sum = "";
-
-    
 
   }
 
