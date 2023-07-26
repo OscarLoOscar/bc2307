@@ -1,7 +1,7 @@
 public class Person { // template
   // Describe the person by attributes
-  int age;
-  char gender; // week 6 -> ENUM
+  private int age;
+  private char gender; // week 6 -> ENUM
   // ...
   
   public static boolean isMale(char gender) { // belongs to class
