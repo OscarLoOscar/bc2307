@@ -18,7 +18,8 @@ public class ItemDesc {
         new ItemDesc("Item B", "70% Discount, just for this week!");
     Transaction t = new Transaction(1, itemdesc1, 3, 10.5);
     Transaction t2 = new Transaction(1, itemdesc2, 4, 20.5);
-    Order order = new Order(new Transaction[] {t, t2});
+    Transaction[] arr = new Transaction[] {t, t2};
+    Order order = new Order(arr);
 
     System.out.println(order.getTotal()); // 3 * 10.5 + 4 * 20.5
   }

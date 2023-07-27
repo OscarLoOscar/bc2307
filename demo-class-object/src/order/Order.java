@@ -7,6 +7,7 @@ public class Order {
   public Order(Transaction[] transactions) {
     // Pass by reference
     this.transactions = transactions;
+    
   }
 
   // getTotal() -> sum up subtotal
