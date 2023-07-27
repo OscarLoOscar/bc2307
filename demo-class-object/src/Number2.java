@@ -46,6 +46,5 @@ public class Number2 {
     n1.print();
     n2.print();
 
-
   }
 }

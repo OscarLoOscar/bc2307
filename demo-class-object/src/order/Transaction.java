@@ -10,6 +10,8 @@ public class Transaction {
 
   private double unitPrice;
 
+  // private Discount discount;
+
   public Transaction(int itemNo, ItemDesc itemDesc, int quantity,
       double unitPrice) {
     this.itemNo = itemNo;
@@ -19,6 +21,9 @@ public class Transaction {
   }
 
   // getSubtotal(), no new attribute
+  public double subtotal() {
+    return this.unitPrice * this.quantity;
+  }
 
   public int getItemNo() {
     return this.itemNo;
