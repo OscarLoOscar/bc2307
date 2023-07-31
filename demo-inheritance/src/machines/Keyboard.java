@@ -1,3 +1,4 @@
+package machines;
 public class Keyboard {
 
   String buttonType;

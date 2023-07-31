@@ -1,3 +1,5 @@
+package abstracts;
+
 public abstract class Person {
 
   private int age; // 0

@@ -1,3 +1,5 @@
+package abstracts;
+
 public class Student extends Adult {
 
   public Student() {
