@@ -6,9 +6,12 @@ public class Laptop extends Machine {
   private Keyboard keyboard;
   private Monitor monitor;
 
+  private int volume;
+
   // subclass constructor must call one of superclass constructors
 
   public Laptop() {
+    // super(); // new Machine();
     // implicitly call superclass empty constructor
     // new Machine()
   }
@@ -27,19 +30,29 @@ public class Laptop extends Machine {
   }
 
   public Laptop(double weight, Keyboard keyboard, Monitor monitor) {
-    super(weight); // new Machine(5);
+    super(weight); // super(); + this.setWeight(weight);
     this.keyboard = keyboard;
     this.monitor = monitor;
   }
 
   @Override // Method Overriding
   public void start() {
+    super.start(); // Machine Start ...
     System.out.println("Laptop Start ...");
   }
 
   @Override // Method Overriding
   public void stop() {
     System.out.println("Laptop Stop ...");
+  }
+
+  // You cannot override the final method in superclass
+  // public static String staticMethod(String x, String y) {
+
+  // }
+
+  public void mute() {
+    this.volume = 0;
   }
 
   public static void main(String[] args) {
@@ -49,11 +62,23 @@ public class Laptop extends Machine {
     laptop.start(); // Laptop Start ...
     laptop.stop(); // Laptop Stop ...
 
-    Machine machine = new Machine();
+    Machine machine = new Machine(); // weight = 0.0
     machine.setWeight(5.0d);
     System.out.println(machine.getWeight()); // 5.0
     machine.start(); // Machine Start ...
     machine.stop(); // Machine Stop ...
+
+    Laptop laptop2 = new Laptop();
+    laptop2.setWeight(10.0d);
+    System.out.println(laptop2.getWeight()); // 10.0
+
+    Laptop laptop3 = new Laptop();
+    System.out.println(laptop3.getWeight()); // 1.0
+    System.out.println(Machine.staticMethod("abc", "def")); // abcdef
+    System.out.println(Laptop.staticMethod("abc", "def")); // abcdef
+    // laptop3.staticMethod("abc", "def"); // not recommended
+
+
   }
 
 }
