@@ -21,6 +21,7 @@ public class ItemDesc {
     Transaction[] arr = new Transaction[] {t, t2};
     Order order = new Order(arr);
     System.out.println(order.getTotal()); // 3 * 10.5 + 4 * 20.5
+
   }
 
 }
