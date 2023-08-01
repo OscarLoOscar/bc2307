@@ -1,8 +1,12 @@
 public class Helloworld {
   public static void main(String[] args) {
-    // print out something
-    System.out.println("I'm Vincent"); // end with semi-colon
-    System.out.println("Hello"); // end with semi-colon
-    System.out.println("hello   *#&$%(@#%) 中心"); // end with semi-colon
+    int a = 10;
+    int b = 98235;
+    int c = 12;
+
+    System.out.println(Integer.toBinaryString(a));
+    System.out.println(Integer.toBinaryString(b));
+    System.out.println(Integer.toBinaryString(c));
+
   }
 }
