@@ -1,4 +1,7 @@
 package ex2;
+
+import java.util.Objects;
+
 public class Monitor {
   private double length;
   private double width;
@@ -27,4 +30,16 @@ public class Monitor {
   public void setWidth(double width) {
     this.width = width;
   }
+    @Override
+  public boolean equals(Object o) {
+    if (this == o)
+      return true;
+    if (!(o instanceof Monitor))
+      return false;
+    Monitor monitor = (Monitor) o;
+    return Objects.equals(monitor.length, this.length) &&
+        Objects.equals(monitor.width, this.width);
+
+  }
+
 }

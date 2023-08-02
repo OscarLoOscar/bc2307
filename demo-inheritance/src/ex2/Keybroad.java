@@ -1,5 +1,7 @@
 package ex2;
+
 import java.security.Key;
+import java.util.Objects;
 
 public class Keybroad {
   String buttonType;
@@ -28,5 +30,17 @@ public class Keybroad {
 
   public void setNoOfButton(int noOfButton) {
     this.noOfButton = noOfButton;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o)
+      return true;
+    if (!(o instanceof Keybroad))
+      return false;
+    Keybroad keybroad = (Keybroad) o;
+    return Objects.equals(keybroad.buttonType, this.buttonType) &&
+        Objects.equals(keybroad.noOfButton, this.noOfButton);
+
   }
 }

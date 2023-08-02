@@ -1,16 +1,16 @@
 // package demo-class-object.src;
 
-public class Car {
+public class Car1 {
   int noOfWheel;
 
   int capacity;
 
   String color;
 
-  public Car() {
+  public Car1() {
   }
 
-  public Car(int noOfWheel, int capacity, String color) {
+  public Car1(int noOfWheel, int capacity, String color) {
     this.noOfWheel = noOfWheel;
     this.capacity = capacity;
     this.color = color;

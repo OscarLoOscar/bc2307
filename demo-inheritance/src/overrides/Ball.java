@@ -1,5 +1,7 @@
 package overrides;
 
+import java.util.Objects;
+
 public class Ball {
   private String color;
 
@@ -7,7 +9,7 @@ public class Ball {
     this.color = color;
   }
 
-  @Override
+  @Override // 記
   public boolean equals(Object o) {// instance method
     // if address same , values inside the object must be same
     if (this == o)
@@ -15,7 +17,9 @@ public class Ball {
     if (!(o instanceof Ball))
       return false;
     Ball ball = (Ball) o;
-    return ball.color.equals(this.color);
+    // return ball.color.equals(this.color);
+     return Objects.equals(ball.color, this.color);
+    // return ball.color.equals(this.color);//ball just a reference , Ball can be null 
   }
 
   public static void main(String[] args) {

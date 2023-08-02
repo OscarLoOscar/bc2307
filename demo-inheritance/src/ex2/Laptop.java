@@ -1,4 +1,7 @@
 package ex2;
+
+import java.util.Objects;
+
 public class Laptop extends Machine {// Laptop is subClass/childClass , machine is parentClass/superClass
   // double weight
   private Keybroad keybroad;
@@ -41,6 +44,20 @@ public class Laptop extends Machine {// Laptop is subClass/childClass , machine 
   @Override
   public void stop() {
     System.out.println("Laptop is stop...");
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o)
+      return true;
+
+    if (!(o instanceof Laptop))
+      return false;
+
+    Laptop laptop = (Laptop) o;
+    return Objects.equals(laptop.keybroad, this.keybroad) &&
+        Objects.equals(laptop.monitor, this.monitor);
+
   }
 
   // you cannot override the final method in superclass
