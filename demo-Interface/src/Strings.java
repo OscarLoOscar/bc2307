@@ -6,7 +6,7 @@ public class Strings implements CharSequence {
     arr = new char[str.length()];
   }
 
-  public static Strings valueOf(Strings str) {
+  public static Strings valueOf(String str) {
     return new Strings(str);
   }
 
@@ -23,18 +23,20 @@ public class Strings implements CharSequence {
   @Override
   public CharSequence subSequence(int start, int end) {
     if (end < start || start < 0 || end < 0 || start > this.arr.length - 1
-        || staendrt > this.arr.length - 1)
+        || end > this.arr.length)
       return String.valueOf(this.arr);
     StringBuilder sb = new StringBuilder();
     for (int i = start; i < end; ++i) {
       sb.append(this.arr[i]);
     }
-    return sb;
+    return sb.toString();
   }
 
   public static void main(String[] args) {
-    CharSequence charSequence = new CharSequence();
+    // CharSequence charSequence = new CharSequence();
     // interface CharSequence ->who is implement CharSequence ? String.
     Strings s = Strings.valueOf("abc");
+    System.out.println(s.toString());
+    System.out.println(s.subSequence(1, 3));
   }
 }

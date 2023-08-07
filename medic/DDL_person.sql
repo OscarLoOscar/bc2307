@@ -1,0 +1,11 @@
+CREATE TABLE PERSON (
+	  id INTEGER NOTNULL AUTO_INVREMENT,
+		firstname VARCHAR(30) NOT NULL,
+		lastname VARCHAR(30) NOT NULL,
+		age int(3)  NOT NULL,
+    height int()  NOT NULL,
+    weight int(3)  NOT NULL,
+    PRIMARY KEY(id),
+);
+
+DROP TABLE IF EXISTS CHANNELS;

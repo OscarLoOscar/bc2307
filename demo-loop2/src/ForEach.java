@@ -50,7 +50,7 @@ public class ForEach {
     // Output: String[]
     // 1. substring()
     System.out.println(Arrays.toString(split2(" hello world a abc !  ")));
-    System.out.println(Arrays.toString(split2(" abc  ")));
+    // System.out.println(Arrays.toString(split2(" abc ")));
     // 2. toCharArray()
 
   }
@@ -90,9 +90,10 @@ public class ForEach {
         spaceCount++;
       }
     }
-    char[] chars = s.toCharArray();
+    char[] chars = str.toCharArray();
     int idx = 0;
     String[] result = new String[spaceCount + 1];
+    Arrays.fill(result, ""); // assign "" to all elements
     for (int i = 0; i < chars.length; ++i) {
       if (chars[i] == ' ') {
         idx++;
