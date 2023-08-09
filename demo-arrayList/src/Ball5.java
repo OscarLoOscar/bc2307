@@ -7,7 +7,7 @@ public class Ball5 {
   private static int idCOunter = 0;
 
   public Ball5(Colour5 colour5) {
-    this.id = ++idCOunter;
+    this.id = ++idCOunter; // 記，new一個波有自己id
     this.colour5 = colour5;
   }
 
@@ -15,15 +15,15 @@ public class Ball5 {
     return this.colour5.getScore();
   }
 
-  public int getId() {
-    return this.id;
-  }
-
   public static Ball5 random() {
-    // get random colour
-    int random = new Random().nextInt(3);
+    // Get random colour
+    int random = new Random().nextInt(3);// 0,1,2
     Colour5 colour5 = Colour5.getColour5(random);
     return new Ball5(colour5);
+  }
+
+  public int getId() {
+    return this.id;
   }
 
   @Override
@@ -44,7 +44,9 @@ public class Ball5 {
 
   @Override
   public String toString() {
-    return "id : " + this.id + //
-        " colour : " + this.colour5;//
+    return "[" + //
+        "id : " + this.id + //
+        " colour : " + this.colour5.name()//
+        + "]";//
   }
 }

@@ -1,5 +1,3 @@
-package hashset;
-
 import java.util.Objects;
 
 public class Coordinate {
@@ -15,17 +13,21 @@ public class Coordinate {
   public boolean equals(Object o) {
     if (this == o)
       return true;
-
     if (!(o instanceof Coordinate))
       return false;
-      
     Coordinate coordinate = (Coordinate) o;
     return this.x == coordinate.x //
         && this.y == coordinate.y;
   }
 
   @Override
-  public int hashcode() {
+  public int hashCode() {
     return Objects.hash(this.x, this.y);
   }
+
+  @Override
+  public String toString() {
+    return this.x + "  " + this.y;
+  }
+
 }

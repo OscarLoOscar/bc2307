@@ -3,13 +3,33 @@ public class Cat extends GameMember implements Move {
 
   @Override
   public void jump() {
-    System.out.println("Moving up");
-    super.addscore(5);
+    super.addScore(4);
   }
 
   @Override
+  public void bigJump() {
+    
+  }
+  
+  @Override
   public void up() {
-    super.addscore(5);
+    System.out.println("Moving up");
+    super.addScore(1);
     // GameMember.up(this);
+  }
+
+  @Override
+  public void down() {
+
+  }
+
+  @Override
+  public void left() {
+
+  }
+
+  @Override
+  public void right() {
+
   }
 }

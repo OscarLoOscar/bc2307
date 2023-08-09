@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 
 public class DemoArrayList {
   public static void main(String[] args) {
@@ -15,7 +16,6 @@ public class DemoArrayList {
     ArrayList<Integer> numbers;
     // Initialization , create arrayList object
     numbers = new ArrayList<>();
-
     ArrayList<Integer> numbers2 = new ArrayList<>();
     numbers2.add(1);
     numbers2.add(3);
@@ -49,20 +49,23 @@ public class DemoArrayList {
     // Remove
     numbers2.remove(2);// remove by index , remove Integer 100
     System.out.println(numbers2.size());
-
+    //
     numbers2.removeAll(number3);// remover Integer 1000,2000
     System.out.println(numbers2.size());
-
-
+    //
     System.out.println(numbers2.indexOf(1000));// -1
     System.out.println(numbers2.indexOf(3));// 1
-
+    //
     System.out.println(numbers2);// [1, 3, 4, null]
-
+    //
     System.out.println(numbers2.contains(3));
     System.out.println(numbers2.contains(900));// check value , not check index
     System.out.println(numbers2.contains(number3));// false
-
-    numbers2.clear();
+    //
+    numbers2.add(1, 4);// insert
+    System.out.println(numbers2);// [1,4,3,4,null]
+    //
+    numbers2.clear();// remove all elements
+    System.out.println(numbers2.size());
   }
 }

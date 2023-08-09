@@ -25,8 +25,12 @@ public class Pocket {
     this.balls.add(ball);// run time error
   }
 
-  public void remove(Ball5 ball) {
-    this.balls.remove(ball);// run time
+  public void removeFirstBall(Ball5 ball) {
+    this.balls.remove(0);// run time
+  }
+
+  public void remove(Ball5 ball5) {
+    this.balls.remove(ball5);
   }
 
   public void remove(int ballId) {// OverLoading
@@ -34,6 +38,17 @@ public class Pocket {
       if (b.getId() == ballId) // primitive
         this.balls.remove(b);
       return; // remove the first one and return
+      // without return : ConcurrentModificationException
+      //return: 从当前的方法中退出,返回到该调用的方法的语句处,继续执行。 記
+    }
+  }
+
+  public void remove1(int ballId) {
+    for (int i = 0; i < this.balls.size(); ++i) {
+      if (this.balls.get(i).getId() == ballId) {
+        this.balls.remove(i);
+      }
+      // return;
     }
   }
 
@@ -41,14 +56,9 @@ public class Pocket {
   // public String toString() {
   // return this.balls.toString();
   // }
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder("[");
-    for (Ball5 b : this.balls) {
-      sb.append(b.toString());
-      sb.append("]");
-    }
-    return sb.toString();
+
+  public int getSize() {
+    return this.balls.size();
   }
 
   public int totalScore() {
@@ -57,5 +67,16 @@ public class Pocket {
       sum += b.getScore();
     }
     return sum;
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    for (Ball5 b : this.balls) {
+      sb.append(b.toString());
+      sb.append(",");
+    }
+    sb.append("]");
+    return sb.toString();
   }
 }

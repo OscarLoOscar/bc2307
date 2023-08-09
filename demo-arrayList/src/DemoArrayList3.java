@@ -1,21 +1,22 @@
 public class DemoArrayList3 {
   public static void main(String[] args) {
-    Ball b1 = new Ball(Colour5.RED);
-    Ball b2 = new Ball(Colour5.BLUE);
-    Ball b3 = new Ball(Colour5.YELLOW);
-    Ball b4 = new Ball(Colour5.RED);
-    Ball b5 = new Ball(Colour5.RED);
-    Ball b6 = new Ball(Colour5.YELLOW);
-    Ball b7 = new Ball(Colour5.BLUE);
-    Ball b8 = new Ball(Colour5.RED);
-    Pocket p1 = new Pocket();
-    p1.add(b1);
-    p1.add(b2);
-    p1.add(b3);
-    p1.add(b4);
-    p1.add(b5);
-    System.out.println(p1);
-    // p1.remove(b1);
+    Person5 p1 = new Person5();
+
+    Player5.fillThePocket(p1.getLeftPocket());
+    System.out.println(p1.getLeftPocket().getSize()); // 5
+
+    Player5.fillThePocket(p1.getRightPocket());
+    System.out.println(p1.getRightPocket().getSize()); // 5
+
+    System.out.println("p1 Total Score:" + p1.totalScore());
+    System.out.println(
+        "p1 Left Pocket Ball Details:" + p1.getLeftPocket().toString());
+    System.out.println(
+        "p1 Right Pocket Ball Details:" + p1.getRightPocket().toString());
+
+    Person5 p2 = new Person5();
+    Player5.fillThePocket(p2.getLeftPocket());
+    Player5.fillThePocket(p2.getRightPocket());
 
   }
 }

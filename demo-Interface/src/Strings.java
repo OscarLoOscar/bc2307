@@ -17,7 +17,7 @@ public class Strings implements CharSequence {
 
   @Override
   public char charAt(int idx) {
-    return arr.length;
+    return this.arr[idx];
   }
 
   @Override

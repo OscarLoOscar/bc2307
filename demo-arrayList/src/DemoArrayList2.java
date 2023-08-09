@@ -46,6 +46,7 @@ public class DemoArrayList2 {
 
     // ArrayList<String> stringList2354 = Arrays.asList(string);
     List<String> stringList = Arrays.asList(string);
+    //UnsupportedOperationException
     stringList.add("ijk");// compile到 , run-time error
     stringList.remove(2);
     System.out.println(stringList);
