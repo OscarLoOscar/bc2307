@@ -4,12 +4,11 @@ public enum Color {
   BLUE(3),//
   ;
 
-  private int id;
+   int id;
 
   private Color(int id) {
     this.id = id;
   }
-
   public int getId() {
     return this.id;
   }

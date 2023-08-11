@@ -1,17 +1,5 @@
-public class Dog extends GameMember implements Move {
+public class Dog extends Animal {
 
-  // int score = 0;
-  String name;
-
-  @Override
-  public void jump() {
-    super.addScore(3);
-  }
-  
-  @Override
-  public void bigJump() {
-    
-  }
 
   @Override
   public void up() {

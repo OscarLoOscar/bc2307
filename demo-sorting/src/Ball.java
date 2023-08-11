@@ -1,9 +1,12 @@
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.List;
 
-public class Ball implements Comparable<Ball> {
+public class Ball implements Comparator<Ball> {
 
   int id;
   Color color;
@@ -21,11 +24,13 @@ public class Ball implements Comparable<Ball> {
   public int compareTo(Ball ball) { // Comparable , 記
     return ball.id > this.id ? 1 : -1;
   }
+
   // compareTo this concept
   // compare ,
-  // public int compare(Ball b1, Ball b2) { // Comparator , 記
-  // return b1.id > b2.id ? 1:-1;
-  // }
+  @Override
+  public int compare(Ball b1, Ball b2) { // Comparator , 記
+    return b1.id > b2.id ? 1 : -1;
+  }
 
   // yellow come first , if color same , id ascending order
   // if not yellow , id descending orderF
@@ -41,6 +46,9 @@ public class Ball implements Comparable<Ball> {
     balls.add(new Ball(5, Color.YELLOW));
     balls.add(new Ball(100, Color.YELLOW));
     Collections.sort(balls, new SortByColor());
+    // [id : 1 color RED, id : 100 color YELLOW, id : 5 color YELLOW, id : 4 color BLUE]/
     System.out.println(balls);
+
+
   }
 }
