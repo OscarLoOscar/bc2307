@@ -1,7 +1,9 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Pocket {
   ArrayList<Ball5> balls;// = new ArrayList<>();
+
   // just attribute , 唔需要比生命佢
 
   public Pocket() {
@@ -39,7 +41,7 @@ public class Pocket {
         this.balls.remove(b);
       return; // remove the first one and return
       // without return : ConcurrentModificationException
-      //return: 从当前的方法中退出,返回到该调用的方法的语句处,继续执行。 記
+      // return: 从当前的方法中退出,返回到该调用的方法的语句处,继续执行。 記
     }
   }
 

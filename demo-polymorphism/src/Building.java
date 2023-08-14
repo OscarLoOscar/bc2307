@@ -1,4 +1,5 @@
-public abstract class Building {
+public abstract class Building { // abstract class or class
+  
   double height;
 
   public void print() {
@@ -6,6 +7,11 @@ public abstract class Building {
   }
 
   public void print2() {
-    this.print();//this 指run time時既this
+    this.print();
   }
+
+  public void print3() {
+    System.out.println("I am Building");
+  }
+
 }

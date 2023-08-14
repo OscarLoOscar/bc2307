@@ -1,3 +1,5 @@
-public abstract class Drink extends Item{
+package shop;
+
+public abstract class Drink extends DisplayItem{
   
 }

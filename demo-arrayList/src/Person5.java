@@ -34,8 +34,10 @@ public class Person5 implements Player5 {
     Person5 p2 = new Person5();
     Player5.fillThePocket(p1.getLeftPocket());
     Player5.fillThePocket(p1.getRightPocket());
-    // System.out.println(p1.getLeftPocket().getSize());//5
-    // System.out.println(p1.getRightPocket().getSize());//5
+    System.out.println("TEST");
+    System.out.println(p1.getLeftPocket());
+    System.out.println(p1.getLeftPocket().getSize());//5
+    System.out.println(p1.getRightPocket().getSize());//5
     System.out.println("TEST");
     System.out.println(p1.getLeftPocket());
     // System.out.println(p1.getLeftPocket().remove(0););

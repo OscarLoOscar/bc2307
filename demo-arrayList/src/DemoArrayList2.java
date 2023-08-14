@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 public class DemoArrayList2 {
@@ -37,7 +38,7 @@ public class DemoArrayList2 {
     }
 
     // Array -> ArrayList
-    String[] string = new String[] {"hello", "world", "!"};
+    String[] string = new String[] { "hello", "world", "!" };
 
     List<String> s2 = Arrays.asList(string);// List is interface
     // Move m = new Student4();
@@ -46,10 +47,10 @@ public class DemoArrayList2 {
 
     // ArrayList<String> stringList2354 = Arrays.asList(string);
     List<String> stringList = Arrays.asList(string);
-    //UnsupportedOperationException
-    stringList.add("ijk");// compile到 , run-time error
-    stringList.remove(2);
-    System.out.println(stringList);
+    // UnsupportedOperationException
+    // stringList.add("ijk");// compile到 , run-time error
+    // stringList.remove(2);
+    // System.out.println(stringList);
 
     // Read & Write
     List<String> stringList2 = new ArrayList<>(Arrays.asList(string));

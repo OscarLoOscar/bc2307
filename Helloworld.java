@@ -7,6 +7,6 @@ public class Helloworld {
     System.out.println(Integer.toBinaryString(a));
     System.out.println(Integer.toBinaryString(b));
     System.out.println(Integer.toBinaryString(c));
-
   }
+
 }

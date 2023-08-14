@@ -1,7 +1,7 @@
 import java.uDemo2Arrays;
 import java.util.Random;
 
-public class Demo {
+public class Demo6 {
   public static void main(String[] args) {
     int[] nums = new int[3];
     // int[] nums -> declaration
@@ -39,11 +39,11 @@ public class Demo {
     System.out.println(Arrays.toString(arr));
     System.out.println(str);
     //
-    Demo[][] demo = new Demo[2][2];
-    demo[0][0] = new Demo();
-    demo[0][1] = new Demo();
-    demo[1][0] = new Demo();
-    demo[1][1] = new Demo();
+    Demo6[][] demo = new Demo6[2][2];
+    demo[0][0] = new Demo6();
+    demo[0][1] = new Demo6();
+    demo[1][0] = new Demo6();
+    demo[1][1] = new Demo6();
     for (int i = 0; i < demo.length; ++i) {
       for (int j = 0; j < demo[0].length; ++j) {
         System.out.println(demo[i][j]);

@@ -10,10 +10,11 @@ public class Zoo<T> {
     this.aminal = animal;
   }
 
-  public Zoo() {}
+  public Zoo() {
+  }
 
   public Zoo(T t) {
-    this.t = t;
+    this.aminal = t;
   }
 
   public static <T extends Dog5> Zoo<T> of(T t) { // return tupe AND/OR input parameter 放T,要描述T範圍
@@ -29,14 +30,14 @@ public class Zoo<T> {
 
   public static void main(String[] args) {
     // Zoo<Dog> zoo1 = new Zoo<>();
-    Zoo<Dog5> zoo1 = Zoo.of(Dog5.of("xyz"));
+    Zoo<Dog5> zoo1 = Zoo.of(Dog5.of("abc"));
     // zoo1.setAnimal(new Cat()); Compile error -> strongm type check
     zoo1.setAnimal(Dog5.of("def"));
 
     Zoo<Animal5> zoo2 = Zoo.of(new Cat5());// error
     zoo2.setAnimal(new Animal5());
-    zoo2.setAnimal(new Dog5());
-    zoo2.setAnimal(new Cat5());
+    zoo2.setAnimal(new Dog5("abc"));
+    zoo2.setAnimal(new Cat5("abc"));
 
     Dog5 dog = Dog5.of("abc");
 

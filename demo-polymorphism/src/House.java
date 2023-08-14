@@ -1,7 +1,12 @@
 public class House extends Building {
+
   private double capacity;
 
-  public void setCapacity(double capacity) {
+  public House() {
+
+  }
+
+  public House(double capacity) {
     this.capacity = capacity;
   }
 
@@ -11,12 +16,16 @@ public class House extends Building {
 
   @Override
   public void print() {
-    System.out.println("I am nothing");
+    System.out.println("I am House");
   }
 
-  // method overloading
-  public void print(String str){
+  // Overloading
+  public void print(String s) {
+    System.out.println("Overloading ... " + s);
+  }
 
+  public void buildingPrint() {
+    super.print();
   }
 
 }

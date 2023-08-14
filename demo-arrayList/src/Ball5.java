@@ -4,10 +4,10 @@ import java.util.Random;
 public class Ball5 {
   private int id;
   private Colour5 colour5;
-  private static int idCOunter = 0;
+  private static int idCounter = 0;
 
   public Ball5(Colour5 colour5) {
-    this.id = ++idCOunter; // 記，new一個波有自己id
+    this.id = ++idCounter; // 記，new一個波有自己id
     this.colour5 = colour5;
   }
 
@@ -36,7 +36,6 @@ public class Ball5 {
     return this.id == ball.id && this.colour5 == ball.colour5;
   }
 
-
   @Override
   public int hashCode() {
     return Objects.hash(this.id, this.colour5);
@@ -44,9 +43,9 @@ public class Ball5 {
 
   @Override
   public String toString() {
-    return "[" + //
+    return "(" + //
         "id : " + this.id + //
         " colour : " + this.colour5.name()//
-        + "]";//
+        + ")";//
   }
 }
