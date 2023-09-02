@@ -1,5 +1,6 @@
 package demoHashMap;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,9 +10,14 @@ public class demoHashMap<K, V> extends HashMap<K, V> {
     // Limitation : you can only access the element by int index
     // Solution : HashMap<>()
     HashMap<String, String> hmap = new HashMap<>();
+
     // <String , Stirng > -> <Key,Value>
     hmap.put("abc", "Hello World");
     hmap.put("bcd", "I am Developer");
+    String[] keys = hmap.keySet().stream().toArray(String[]::new);
+    System.out.println("TEST" + Arrays.toString(keys));
+
+    
     System.out.println(hmap.size());// 2 entries ,
     System.out.println(hmap.get("abc"));// Hello World
     // Map.Entry -> Key + value
@@ -46,7 +52,6 @@ public class demoHashMap<K, V> extends HashMap<K, V> {
     for (String value : hmap.values()) {
       System.out.println(value);
     }
-
     System.out.println(hmap.remove("abc"));// hello !!
     System.out.println(hmap.remove("bcd", "i am not developer"));// false
     System.out.println(hmap.remove("bcd", "I am Developer"));// true

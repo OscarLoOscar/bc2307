@@ -1,15 +1,17 @@
-package demohashset;
 
+
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 
 public class DemoHashSet2 extends HashSet {
 
   public static void main(String[] args) {
 
-
     HashSet<Byte> bytes = new HashSet<>();
     // bytes.add(Byte.valueOf(4));
-    // The method valueOf(byte) in the type Byte is not applicable for the arguments (int)
+    // The method valueOf(byte) in the type Byte is not applicable for the arguments
+    // (int)
     bytes.add(Byte.valueOf((byte) 4)); // int->byte->Byte
     bytes.add(byteToByte(10));
     System.out.println("size : " + bytes.size());
@@ -24,10 +26,9 @@ public class DemoHashSet2 extends HashSet {
     System.out.println("TEST : " + bytes.equals(bytes2));// true
     // Wrapper class check equals use equals TO check value // notes
     // primitive & enum use ==
-
+    List<Integer> ans = new ArrayList<>();
     boolean isRemoved = bytes.remove((byteToByte(10)));
     System.out.println(isRemoved);
-
 
   }
 
